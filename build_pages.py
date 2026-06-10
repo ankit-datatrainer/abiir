@@ -4,7 +4,7 @@ import re
 import json
 from bs4 import BeautifulSoup
 
-base_dir = r"c:\Users\ankit\OneDrive\Desktop\Upside Down Project\Abiir"
+base_dir = os.path.dirname(os.path.abspath(__file__))
 template_dir = os.path.join(base_dir, "cozy_candle_store")
 extracted_dir = os.path.join(base_dir, "extracted_pages")
 output_dir = os.path.join(base_dir, "website_build")
