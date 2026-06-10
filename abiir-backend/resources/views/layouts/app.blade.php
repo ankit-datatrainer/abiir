@@ -73,7 +73,7 @@
 </button>
 <!-- Logo & Navigation -->
 <div class="flex items-center space-x-8">
-<a class="text-2xl font-serif font-bold tracking-tight text-gray-900 flex items-center" href="index.html">
+<a class="text-2xl font-serif font-bold tracking-tight text-gray-900 flex items-center" href="/">
 <span class="mr-2 lg:hidden">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -86,16 +86,16 @@
       Abiir
      </a>
 <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-semibold text-gray-700">
-<a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="index.html">
+<a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="/">
        Home
       </a>
-<a class="hover:text-cozy-green transition-colors" href="shop.html">
+<a class="hover:text-cozy-green transition-colors" href="/shop">
        Shop
       </a>
-<a class="hover:text-cozy-green transition-colors" href="about.html">
+<a class="hover:text-cozy-green transition-colors" href="/about">
        About
       </a>
-<a class="hover:text-cozy-green transition-colors" href="contact.html">
+<a class="hover:text-cozy-green transition-colors" href="/contact">
        Contact
       </a>
 </nav>
@@ -133,16 +133,16 @@
 <!-- Mobile Dropdown Menu -->
 <div class="hidden lg:hidden w-full bg-cozy-cream border-t border-gray-200 absolute left-0 top-full" id="mobile-menu">
 <nav class="flex flex-col space-y-4 px-6 py-6 text-sm font-semibold text-gray-700 uppercase tracking-widest shadow-lg">
-<a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="index.html">
+<a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="/">
       Home
      </a>
-<a class="hover:text-cozy-green transition-colors" href="shop.html">
+<a class="hover:text-cozy-green transition-colors" href="/shop">
       Shop
      </a>
-<a class="hover:text-cozy-green transition-colors" href="about.html">
+<a class="hover:text-cozy-green transition-colors" href="/about">
       About
      </a>
-<a class="hover:text-cozy-green transition-colors" href="contact.html">
+<a class="hover:text-cozy-green transition-colors" href="/contact">
       Contact
      </a>
 <a class="hover:text-cozy-green transition-colors border-t border-gray-200 pt-4 mt-2" href="#">
@@ -181,17 +181,17 @@
       </h3>
 <ul class="space-y-3 text-sm text-gray-600">
 <li>
-<a class="hover:text-cozy-green transition-colors" href="shop.html">
+<a class="hover:text-cozy-green transition-colors" href="/shop">
          All Products
         </a>
 </li>
 <li>
-<a class="hover:text-cozy-green transition-colors" href="about.html">
+<a class="hover:text-cozy-green transition-colors" href="/about">
          About Us
         </a>
 </li>
 <li>
-<a class="hover:text-cozy-green transition-colors" href="contact.html">
+<a class="hover:text-cozy-green transition-colors" href="/contact">
          Contact
         </a>
 </li>
@@ -256,3 +256,4 @@
 </footer>
 </body>
 </html>
+
