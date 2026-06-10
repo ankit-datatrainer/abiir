@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+ <head>
+  <title>
+   About Us | Abiir
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+   <script id="tailwind-config">
+    tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'cozy-green': '#375243',
+        'cozy-cream': '#efece7',
+        'cozy-beige': '#f5f4ef',
+        'cozy-text': '#222222',
+        'cozy-muted': '#666666',
+        
+        /* Aliases for other templates to adapt to home_page style */
+        "primary": "#375243",
+        "primary-container": "#375243",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#efece7",
+        "secondary": "#375243",
+        "secondary-container": "#f5f4ef",
+        "on-secondary": "#ffffff",
+        "tertiary": "#666666",
+        "surface": "#efece7",
+        "background": "#efece7",
+        "on-surface": "#222222",
+        "on-surface-variant": "#666666",
+        "on-background": "#222222",
+        "surface-container": "#f5f4ef",
+        "outline": "#d1d5db",
+        "outline-variant": "#e5e7eb"
+      },
+      fontFamily: {
+        serif: ['"EB Garamond"', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+        
+        /* Aliases for other templates */
+        "display-lg": ['"EB Garamond"', 'serif'],
+        "headline-md": ['"EB Garamond"', 'serif'],
+        "body-lg": ['Inter', 'sans-serif'],
+        "body-sm": ['Inter', 'sans-serif'],
+        "label-uppercase": ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+   </script>
+   <style>
+    body { background-color: theme('colors.cozy-cream'); color: theme('colors.cozy-text'); }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+   </style>
+  </link>
+ </head>
+ <body class="bg-background text-on-background font-body-lg antialiased pt-24 flex flex-col min-h-screen">
+  <!-- Top Navigation Bar -->
+  <!-- BEGIN: MainHeader -->
+  <header class="bg-cozy-cream sticky top-0 z-50 border-b border-gray-200">
+   <div class="container mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden text-gray-800 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+    <!-- Logo & Navigation -->
+    <div class="flex items-center space-x-8">
+     <a class="text-2xl font-serif font-bold tracking-tight text-gray-900 flex items-center" href="index.html">
+      <span class="mr-2 lg:hidden">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </span>
+      <div class="w-8 h-8 rounded-full bg-cozy-green text-white flex items-center justify-center mr-2 font-serif font-bold text-lg">
+       A
+      </div>
+      Abiir
+     </a>
+     <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-semibold text-gray-700">
+      <a class="hover:text-cozy-green transition-colors" href="index.html">
+       Home
+      </a>
+      <a class="hover:text-cozy-green transition-colors" href="shop.html">
+       Shop
+      </a>
+      <a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="about.html">
+       About
+      </a>
+      <a class="hover:text-cozy-green transition-colors" href="contact.html">
+       Contact
+      </a>
+     </nav>
+    </div>
+    <!-- Utilities -->
+    <div class="flex items-center space-x-4 lg:space-x-6 text-xs font-semibold text-gray-700">
+     <div class="hidden md:flex items-center space-x-4 border-r border-gray-300 pr-4">
+      <a class="hover:text-cozy-green transition-colors flex items-center" href="#">
+       <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+       My Account
+      </a>
+     </div>
+     <div class="flex items-center space-x-3 lg:space-x-4">
+      <button class="hover:text-cozy-green transition-colors">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+      <button class="hover:text-cozy-green transition-colors relative">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+       <span class="absolute -top-1 -right-2 bg-cozy-green text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
+        0
+       </span>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Dropdown Menu -->
+   <div class="hidden lg:hidden w-full bg-cozy-cream border-t border-gray-200 absolute left-0 top-full" id="mobile-menu">
+    <nav class="flex flex-col space-y-4 px-6 py-6 text-sm font-semibold text-gray-700 uppercase tracking-widest shadow-lg">
+     <a class="hover:text-cozy-green transition-colors" href="index.html">
+      Home
+     </a>
+     <a class="hover:text-cozy-green transition-colors" href="shop.html">
+      Shop
+     </a>
+     <a class="hover:text-cozy-green transition-colors text-cozy-green border-b-2 border-cozy-green pb-1" href="about.html">
+      About
+     </a>
+     <a class="hover:text-cozy-green transition-colors" href="contact.html">
+      Contact
+     </a>
+     <a class="hover:text-cozy-green transition-colors border-t border-gray-200 pt-4 mt-2" href="#">
+      My Account
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- END: MainHeader -->
+  <!-- Main Content Canvas -->
+  <main class="w-full max-w-[1440px] mx-auto">
+   <!-- Hero Section: Narrative Intro -->
+   <section class="px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap relative overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+     <!-- Text Content -->
+     <div class="md:col-span-5 md:col-start-2 z-10 flex flex-col items-start gap-8">
+      <div class="flex flex-col gap-4">
+       <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">
+        Our Philosophy
+       </span>
+       <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+        The Bio Herbal Difference.
+       </h1>
+       <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mt-4">
+        About Us\n\nOur journey began with a simple vision: to craft candles that inspire, uplift, and evoke a sense of tranquility.\n\nAbout Us\n\nAt Abiir, we don’t just sell products—we create experiences. Rooted in elegance, authenticity, and craftsmanship, Abiir brings you a world of fragrances and décor that transform everyday living into moments of luxury.\n\nFrom scented candles, diffusers, and aroma oils to handcrafted pooja essentials, incense, and home décor, every creation at Abiir is thoughtfully designed to connect with your emotions and surroundings. We offer more than variety—we offer quality that resonates with your lifestyle and enhances your personal spaces.\n\nOur philosophy is simple: luxury should be soulful and accessible. Every product, whether it’s a candle that lights up your evenings, a diffuser that elevates your mood, or handcrafted décor that adds warmth to your home, is made with care, precision, and a passion for excellence.\n\nWhat Makes Abiir Different?\n\nCraftsmanship with Purpose – Each product is meticulously created, blending design and fragrance into timeless pieces that are both functional and artistic.\n\nInspired by Culture &amp; Modernity – Our collections are influenced by India’s heritage while embracing contemporary aesthetics, making them perfect for every home and personality.\n\nBeyond Products, A Brand Experience – We don’t just offer candles, oils, and décor—we deliver a sense of belonging, serenity, and charm that stays with you.\n\nWhether it’s the calming glow of our candles, the refreshing mist of our diffusers, the soulful fragrance of our incense, or the artistry of our handicrafts, Abiir is a celebration of refined living.\n\nAbiir is not just about what you buy—it’s about what you feel.\n\nA brand that connects, resonates, and truly becomes a part of your world.
+       </p>
+      </div>
+      <a class="inline-block bg-primary text-on-primary font-label-uppercase text-label-uppercase tracking-widest px-8 py-4 hover:bg-primary-container transition-colors duration-300" href="#process">
+       Discover Our Process
+      </a>
+     </div>
+     <!-- Hero Image Asymmetric -->
+     <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
+      <div class="aspect-[3/4] w-full relative overflow-hidden image-overlay shadow-lg">
+       <img alt="Artisanal pouring of natural soy wax into amber glass jars in a sunlit studio, embodying the bio herbal philosophy of Cozy Candle Co." class="w-full h-full object-cover" data-alt="A close-up, high-quality lifestyle photograph showing the artisanal process of making candles. Golden hour sunlight streams into a rustic studio setting, illuminating an amber glass jar. A hand is pouring pure, melted soy wax into the jar. Surrounding the jar are scattered dried herbs and a wooden wick. The overall mood is warm, organic, and luxurious, emphasizing natural ingredients and slow craftsmanship, fitting a minimalist editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgv6WRbexxiUmIp-iJBjOxEsS0vUrQkX1vWJvYHDK-qTif9iiKmKg31iP6OnL1vMiuKE_DzTvU_j9dW0entyffH_Y6-8FC_j2_Qzt_D3k_CFrYgGt3Jx7k9wTzi-TlCkqUQeMZzjKiq1aPzFpRAGVBIcO_k3cvJMfYtldLobQt8Z-FFWJOBgNDBegRNCZb32j4iyrEM_YP-nMeCuBhoOzRUxQUku-ZZo2R5hKX82KI_AyXHC9wcX86pXrxslSQcDTJ_Lkd-Duf4oI"/>
+      </div>
+      <!-- Decorative Badge -->
+      <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-md animate-spin-slow z-20">
+       <svg class="w-24 h-24 text-primary" viewbox="0 0 100 100">
+        <defs>
+         <path d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" id="circlePath">
+         </path>
+        </defs>
+        <text class="font-label-uppercase text-[10px] tracking-widest fill-current">
+         <textpath href="#circlePath" startoffset="0%">
+          100% NATURAL • BIO HERBAL • ARTISANAL •
+         </textpath>
+        </text>
+        <circle cx="50" cy="50" fill="currentColor" r="4">
+        </circle>
+       </svg>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- The Process (Bento Grid Style) -->
+   <section class="bg-primary-container text-on-primary-fixed py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop" id="process">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+     <div class="max-w-2xl">
+      <span class="font-label-uppercase text-label-uppercase text-inverse-primary tracking-widest block mb-4">
+       Craftsmanship
+      </span>
+      <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
+       Rooted in Nature,
+       <br/>
+       Hand-poured with Care.
+      </h2>
+     </div>
+     <p class="font-body-lg text-body-lg text-on-primary-fixed-variant max-w-md">
+      Our process is deliberately unhurried. We source raw, unrefined ingredients to ensure each scent tells a true botanical story.
+     </p>
+    </div>
+    <div class="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-gutter md:auto-rows-[300px]">
+     <!-- Grid Item 1 (Wide) -->
+     <div class="md:col-span-8 md:row-span-2 relative overflow-hidden group bg-surface-tint min-h-[300px] md:min-h-0">
+      <img alt="Dried herbs and botanical elements used in Cozy Candle Co products." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity" data-alt="A flat lay photograph on a textured stone surface featuring an array of dried botanicals, herbs, and spices used for candle making. Elements include lavender sprigs, dried citrus slices, eucalyptus leaves, and cinnamon sticks. The lighting is soft and diffused, creating subtle shadows that enhance the texture. The color palette is earthy and muted, reflecting an organic, minimalist editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBacaS6bPT5XcCXE76Z_48LMbA7ScfMEO0B30XVrc7_USCMndZx4yz5TiCeeZ8Cipdj2yD4CTA-6Mf2G5zsfFNBwTcfCfVrfhbe1zlGSSKOh73jzsgqZE7-yj8s1Ah-PsJwZhGWUU57CeqdeZvgxeW_u4vX6lZ3Y_Rgq9hIxLb4gty9W5ik0wqD24CAWEql-MB6o0JgwQLZPKyol0oBeli7zWE4vhMW7j957Xpzj4SXSnuCVc6fCZX6EsFFKRlvbFPDxsOb1RJ38rU"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent">
+      </div>
+      <div class="absolute bottom-0 left-0 p-8">
+       <h3 class="font-headline-md text-headline-md text-on-primary mb-2">
+        Botanical Sourcing
+       </h3>
+       <p class="font-body-sm text-body-sm text-inverse-primary max-w-md">
+        We partner with independent herbals gardens to harvest ingredients at their peak potency.
+       </p>
+      </div>
+     </div>
+     <!-- Grid Item 2 (Square) -->
+     <div class="md:col-span-4 bg-surface-container-low p-8 flex flex-col justify-center text-on-surface min-h-[250px] md:min-h-0">
+      <span class="material-symbols-outlined text-4xl text-tertiary mb-6">
+       eco
+      </span>
+      <h3 class="font-headline-md text-headline-md mb-2">
+       Vegan Wax Blend
+      </h3>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">
+       A proprietary blend of coconut and soy wax ensures a clean, sustainable burn without toxins.
+      </p>
+     </div>
+     <!-- Grid Item 3 (Square Image) -->
+     <div class="md:col-span-4 relative overflow-hidden group bg-surface-dim min-h-[300px] md:min-h-0">
+      <img alt="Wooden wicks and essential oils." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A close-up shot of a wooden candle wick resting next to small amber glass dropper bottles filled with essential oils. The setting is a clean, minimalist wooden workbench. Soft, natural light highlights the grain of the wood and the rich amber color of the bottles. The atmosphere is quiet, artisanal, and focused on natural ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk98TH4Rkk9KYH9ESiIUTaRN_ECvEDLeQw0R9wz7wXIehneTOGDeelh84ma_cz67SmcJF7kb9JObJ_fYStChKWUmYrZymc9kOYPvI5pmdj4JE1RsjJoZXVcaoOsJBwfBZ86SznNzbCiqZq2yVACGVN7qyXVvCG1hV63o_QizquybBPidtEJIM05eHj8HTavGEtiaFCDiiiGHHOTmJC7GELoqVmlTWbae3kRxxKQBPkqFDFRUiDLW9w-dwYLufuLghimAfIk6cp_bQ"/>
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300">
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Custom Services Section (Asymmetric Editorial) -->
+   <section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+    <div class="text-center mb-16 md:mb-24">
+     <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest block mb-4">
+      Tailored Experiences
+     </span>
+     <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+      Custom Services
+     </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-gutter items-center">
+     <!-- Service 1: Event Favors -->
+     <div class="md:col-span-5 md:col-start-2 order-2 md:order-1">
+      <h3 class="font-headline-md text-headline-md text-primary mb-4">
+       Bespoke Event Favors
+      </h3>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+       Elevate your weddings, retreats, and corporate gatherings with custom-poured candles. We collaborate with you to select the vessel, design the label, and blend a scent that captures the essence of your event.
+      </p>
+      <ul class="space-y-4 font-body-sm text-body-sm text-secondary mb-8">
+       <li class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-tertiary" style="font-size: 18px;">
+         check
+        </span>
+        Custom vessel selection
+       </li>
+       <li class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-tertiary" style="font-size: 18px;">
+         check
+        </span>
+        Personalized typography &amp; labeling
+       </li>
+       <li class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-tertiary" style="font-size: 18px;">
+         check
+        </span>
+        Minimum order: 50 units
+       </li>
+      </ul>
+      <a class="inline-block border border-outline px-8 py-4 font-label-uppercase text-label-uppercase tracking-widest text-primary hover:bg-primary hover:text-on-primary transition-colors duration-300" href="#">
+       Inquire Now
+      </a>
+     </div>
+     <div class="md:col-span-5 md:col-start-8 order-1 md:order-2">
+      <div class="aspect-square bg-surface-container-low overflow-hidden image-overlay">
+       <img alt="Collection of beautifully packaged custom mini candles for a wedding." class="w-full h-full object-cover" data-alt="A curated collection of small, elegantly packaged candles arranged neatly on a light linen cloth. Each candle features a minimalist, custom label with elegant serif typography, typical of high-end wedding favors. Soft, diffused daylight casts gentle shadows, creating a romantic and sophisticated editorial mood. The color palette revolves around creams, soft whites, and natural textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZbqqEmfs-D6G8Ocv4wUbxuiJ-Zqp_tzoddOC2mijpfKAhm10eklnkgiF7WpE-uUgZ6tFvLVoPygNpAgx7eNLa4NyME5Wh76J4MYGoptcOT1yZ8Vq8jrK-BPeNGny8ly0aQbhhRJ5vjtGQIEN20whRVw809jUqw5MuqcSCpUd7ygDEM-nDsW3b7uxwhb-6WOlENybXS_7EUx8_31EvVuUpL4NzbsmKiRrb6Wm5SJpxoexqSHhKnSyFsn9pSvmPRIYMusnIw5AimI"/>
+      </div>
+     </div>
+     <!-- Spacer -->
+     <div class="md:col-span-12 h-12 hidden md:block">
+     </div>
+     <!-- Service 2: Custom Scents -->
+     <div class="md:col-span-6 md:col-start-1 order-3">
+      <div class="aspect-[4/3] bg-surface-container-low overflow-hidden image-overlay relative">
+       <img alt="Blending custom fragrances in the studio." class="w-full h-full object-cover" data-alt="A focused shot of hands delicately mixing essential oils in a small glass beaker on a wooden table. The scene implies the creation of a custom fragrance blend. Surrounding the beaker are various natural elements like dried rose petals, a notebook with handwritten notes, and dark amber apothecary bottles. The lighting is moody and intimate, highlighting the artisanal and bespoke nature of the service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVtUHE6EyCV_F3aL7cNO0NKAEaHrUqJN5R9hMmRfVcz-1adYZcFywOc-gG8hFPnEe_R7XXujoRg7urzKypvGynyZFEg3105ifJQ9N4jvlFB8nxq3XA1rsKQlsGsq4Qqf63yXYYPyn8HFjuor8zTCMiIydPKAMD8sxAHNSe6ZcGyElXDBBpoRuWvivDTDQ62_oyP7b9sfpWii2sn4p-7wbHvFzNeR3E667VKJEKwUph7d38SFztzTzp-2J_OOzY4vNIjiMvntuTOo4"/>
+      </div>
+     </div>
+     <div class="md:col-span-4 md:col-start-8 order-4">
+      <h3 class="font-headline-md text-headline-md text-primary mb-4">
+       Signature Scent Design
+      </h3>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+       Work directly with our master blenders to develop a signature fragrance for your boutique, hotel, or personal sanctuary. A truly olfactory representation of your brand's identity.
+      </p>
+      <a class="inline-flex items-center gap-2 font-label-uppercase text-label-uppercase tracking-widest text-primary hover:text-tertiary transition-colors duration-300 border-b border-primary hover:border-tertiary pb-1" href="#">
+       Book a Consultation
+       <span class="material-symbols-outlined" style="font-size: 16px;">
+        arrow_forward
+       </span>
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer Component -->
+  <!-- BEGIN: Footer -->
+  <footer class="bg-cozy-beige border-t border-gray-200 mt-16">
+   <div class="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+     <!-- Brand & Newsletter -->
+     <div class="col-span-1 md:col-span-2">
+      <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">
+       Abiir
+      </h2>
+      <p class="text-gray-600 mb-6 text-sm max-w-sm">
+       Premium aroma diffusers, scented candles, and essential oils to elevate your home.
+      </p>
+      <div class="flex max-w-md">
+       <input class="w-full bg-white border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-cozy-green" placeholder="Your email address" type="email"/>
+       <button class="bg-cozy-green text-white px-6 py-2 text-xs uppercase tracking-widest font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">
+        Subscribe
+       </button>
+      </div>
+     </div>
+     <!-- Links -->
+     <div class="col-span-1">
+      <h3 class="text-xs uppercase tracking-widest font-semibold text-gray-900 mb-4">
+       Shop
+      </h3>
+      <ul class="space-y-3 text-sm text-gray-600">
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="shop.html">
+         All Products
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="faq.html">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="order-tracking.html">
+         Order Tracking
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!-- Support -->
+     <div class="col-span-1">
+      <h3 class="text-xs uppercase tracking-widest font-semibold text-gray-900 mb-4">
+       Support
+      </h3>
+      <ul class="space-y-3 text-sm text-gray-600">
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="privacy-policy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="terms-of-services.html">
+         Terms of Service
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="refund-policy.html">
+         Refund Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-cozy-green transition-colors" href="return-policy.html">
+         Return Policy
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+     <p>
+      © 2026 Abiir. All rights reserved.
+     </p>
+     <div class="flex space-x-4 mt-4 md:mt-0">
+      <a class="hover:text-cozy-green" href="#">
+       Instagram
+      </a>
+      <a class="hover:text-cozy-green" href="#">
+       Facebook
+      </a>
+      <a class="hover:text-cozy-green" href="#">
+       Pinterest
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!-- END: Footer -->
+  <!-- Minimal script for nav state if scrolled -->
+  <script>
+   document.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm', 'bg-surface/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-surface');
+            } else {
+                nav.classList.remove('shadow-sm', 'bg-surface/95', 'backdrop-blur-sm');
+                nav.classList.add('bg-surface');
+            }
+        });
+  </script>
+ </body>
+</html>

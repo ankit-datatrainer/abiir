@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Santos Hay &amp; Honey Candle - Cozy Candle Co.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#cac6bc",
+                        "inverse-surface": "#30312e",
+                        "tertiary": "#432a11",
+                        "on-primary-fixed-variant": "#2e4d3c",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c8c1",
+                        "surface-dim": "#dbdad6",
+                        "surface-tint": "#466553",
+                        "surface-bright": "#fbf9f5",
+                        "tertiary-fixed": "#ffdcc0",
+                        "on-tertiary-fixed-variant": "#5e4126",
+                        "on-secondary-fixed-variant": "#48473f",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#5d4025",
+                        "surface-container": "#f0eeea",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e6e2d7",
+                        "on-primary-fixed": "#012113",
+                        "primary-fixed": "#c7ebd4",
+                        "primary-container": "#2d4c3b",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#accfb8",
+                        "on-surface": "#1b1c1a",
+                        "surface-container-low": "#f5f3ef",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-fixed": "#1c1c15",
+                        "on-primary": "#ffffff",
+                        "primary": "#163526",
+                        "inverse-on-surface": "#f2f0ec",
+                        "on-secondary-container": "#66645c",
+                        "surface-variant": "#e4e2de",
+                        "on-tertiary-fixed": "#2c1602",
+                        "surface": "#fbf9f5",
+                        "background": "#fbf9f5",
+                        "outline": "#727973",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#99bca6",
+                        "secondary": "#605e56",
+                        "surface-container-high": "#eae8e4",
+                        "on-surface-variant": "#424843",
+                        "secondary-fixed": "#e6e2d7",
+                        "on-tertiary-container": "#d4ac8a",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e4e2de",
+                        "primary-fixed-dim": "#accfb8",
+                        "tertiary-fixed-dim": "#e8bf9b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "label-uppercase": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "label-uppercase": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Utilities */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-container-highest border-b border-outline-variant/30 dark:border-outline/20 flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-[1440px] mx-auto">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-display-lg text-headline-md font-normal text-primary dark:text-primary-fixed-dim" href="#">
+                Cozy Candle Co.
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center space-x-8 font-body-sm text-body-sm uppercase tracking-widest">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 Active: opacity-80 duration-200" href="#">Shop</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Pages</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Blog</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Look Book</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-4 md:space-x-6 text-primary dark:text-primary-fixed-dim">
+<button aria-label="Search" class="hover:opacity-70 transition-opacity duration-300 hidden md:block">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Person" class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button aria-label="Favorite" class="hover:opacity-70 transition-opacity duration-300 hidden md:block">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="Shopping Cart" class="hover:opacity-70 transition-opacity duration-300 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-[80px]">
+<!-- Product Hero Section -->
+<section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
+<!-- Product Image Gallery (Asymmetric) -->
+<div class="relative w-full aspect-[4/5] md:aspect-[3/4] bg-surface-container rounded-none overflow-hidden group">
+<img alt="Santos Hay &amp; Honey Candle" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully crafted, amber glass jar candle labeled 'Santos Hay + Honey'. The candle is placed on a textured, light linen cloth against a warm, sunlit background. The lighting is soft and golden, highlighting the waxy texture and the rustic, artisanal feel of the product. The overall aesthetic is cozy, minimalist, and perfectly aligned with a slow-living, organic brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtV87opTEamgDeFM8iB8WHYbkQUId-sYpR20rKadzC0QlnkduxkcVytIbA38J4qK9CYNu-xLqzD_fK2jIGLZ8f1tQlDiXAMy9GhXU3Cc9PM4k5qVjgkvX4CnQnkcw5YSGfHg1qDEjuhhanoHX_3R7pHaM1Jgg5duSzgiwxEOofoFhKgOz2M53rXz66QHewupumxF5UPcr5JnQMUGCZVxCZP36rF6feX8oIddCPDvc2OgD1LOeZS8S7aGmA5F3Yf76TP_UkRvJHlU4"/>
+</div>
+<!-- Product Details -->
+<div class="flex flex-col justify-center h-full max-w-lg space-y-8">
+<!-- Breadcrumbs -->
+<nav class="font-body-sm text-body-sm text-secondary uppercase tracking-widest flex items-center space-x-2">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Candles</a>
+<span>/</span>
+<span class="text-primary font-semibold">Santos</span>
+</nav>
+<!-- Title & Price -->
+<div class="space-y-4">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary leading-tight">Santos <br/>Hay &amp; Honey</h1>
+<div class="flex items-center space-x-4">
+<span class="font-body-lg text-body-lg text-primary">$40.00</span>
+<div class="flex items-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-2 font-body-sm text-body-sm text-secondary">(12)</span>
+</div>
+</div>
+</div>
+<!-- Short Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        Hand-poured 100% soy wax candle. A warm, grounding blend of sweet honey, sun-baked hay, and a touch of wild clover. Designed to evoke the feeling of late summer afternoons in the countryside.
+                    </p>
+<!-- Actions -->
+<div class="space-y-6 pt-4 border-t border-outline-variant/30">
+<!-- Quantity -->
+<div class="flex items-center justify-between">
+<span class="font-label-uppercase text-label-uppercase text-primary">Quantity</span>
+<div class="flex items-center border border-outline-variant rounded-none">
+<button class="px-4 py-2 text-secondary hover:text-primary transition-colors focus:outline-none focus:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
+</button>
+<span class="px-4 py-2 font-body-sm text-primary text-center min-w-[40px]">1</span>
+<button class="px-4 py-2 text-secondary hover:text-primary transition-colors focus:outline-none focus:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Add to Cart -->
+<button class="w-full bg-primary hover:bg-primary/90 text-on-primary font-label-uppercase text-label-uppercase py-4 px-8 rounded-none transition-colors duration-300 flex items-center justify-center space-x-2">
+<span>Add to Cart</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<!-- Accordion Details -->
+<div class="pt-8 space-y-4">
+<details class="group cursor-pointer border-b border-outline-variant/30 pb-4" open="">
+<summary class="flex justify-between items-center font-body-sm text-primary uppercase tracking-wider list-none focus:outline-none">
+<span>Scent Notes</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Top: Wild Clover, Sun-baked Hay <br/>
+                                Heart: Golden Honey, Chamomile <br/>
+                                Base: Sandalwood, Warm Amber
+                            </div>
+</details>
+<details class="group cursor-pointer border-b border-outline-variant/30 pb-4">
+<summary class="flex justify-between items-center font-body-sm text-primary uppercase tracking-wider list-none focus:outline-none">
+<span>Details &amp; Care</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                                Burn Time: Approx. 60 hours. <br/>
+                                Always trim your wick to 1/4" before candle is lit each time to avoid any soot. Burn candle so wax pool reaches the jar edge each time to prevent wax tunneling.
+                            </div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story / Philosophy Section -->
+<section class="bg-primary text-on-primary py-12 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-[800px] mx-auto text-center relative z-10 space-y-8">
+<div class="flex justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-primary-fixed-dim" data-icon="eco">eco</span>
+</div>
+<h2 class="font-display-lg text-headline-md md:text-display-lg">The Bio Herbal Philosophy</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+                    We believe in harnessing the power of 100% natural ingredients. Every candle is hand-poured with intention, using only ethically sourced soy wax and botanical essential oils. Create a sanctuary in your home.
+                </p>
+<button class="mt-8 border border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim hover:text-primary font-label-uppercase text-label-uppercase py-3 px-8 rounded-none transition-colors duration-300">
+                    Read Our Story
+                </button>
+</div>
+</section>
+<!-- You May Also Like (Bento/Asymmetric) -->
+<section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap">
+<div class="flex items-center justify-between mb-12">
+<h3 class="font-display-lg text-headline-md text-primary">You May Also Like</h3>
+<a class="font-label-uppercase text-label-uppercase text-secondary hover:text-primary border-b border-transparent hover:border-primary transition-all" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<a class="group flex flex-col space-y-4" href="#">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Viridi Herbis Botanical Candle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist white ceramic candle jar named 'Viridi Herbis' resting on a soft, natural beige fabric. The setting is clean and bright, emphasizing the artisanal, organic nature of the product. The lighting is diffused, casting soft shadows that highlight the smooth texture of the ceramic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoqp--58uRtcOqurPr1yZzN8SCYy-cUX6G2vj6CXVhlb39fU0hmLAGfBtwypWIqLC2QQ8neUeNBVoTz0hL5vikG4tB_wYZyULIVJvNDoRxdumVbTApZX1PuGwNHxTxclIHC-FE6ylnJ0F3u6n8q23dNVN8LsqX3C3_BvcxF8o7ZQPW_42-o4CVgGmjYplBLSdkOXo7tqm-e0v_LFPb_kLoc1sipUpE8yyuqg5VW59l1-NR67MAWLdArS_fuG9VZgYwozyNfyK6a_w"/>
+<div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed font-label-uppercase text-[10px] px-2 py-1">Best Seller</div>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-[20px] text-primary">Viridi Herbis</h4>
+<p class="font-body-sm text-secondary">$42.00</p>
+</div>
+</a>
+<!-- Product Card 2 -->
+<a class="group flex flex-col space-y-4 sm:-mt-8" href="#">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden">
+<img alt="Blossom Freesia Sea Salt Orange" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clear glass jar candle filled with white wax, featuring an elegant label that reads 'Blossom Freesia'. It sits on a rustic wooden table alongside a sprig of dried lavender and some loose matches. The warm, inviting light suggests a cozy evening atmosphere, perfect for a slow-living aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgyEnldgp1KPQy2ZgRFf0fLzbStRZKoVydMrYJr3zCaXz09Gw67Yc1eEWBDUnznROKcNSLMoX5LdTipQtGYxctOMvQGejOwrNon2BNaKvOORoW1Ox25feiLiOVTAS0WUEgqSXU2qVAVUr0fFHi2dIMzR6fiqaqA2bc313B_GhH_Yps0ddgXdJmgDdKEJUei6nXhUAdglQz4x3P3ZAqu7WHyVsOOhMTJdILnyAsyKM3FqRSjMJZ2ay8CY1EFU-BTqYIUeMJ9fgD03o"/>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-[20px] text-primary">Blossom Freesia</h4>
+<p class="font-body-sm text-secondary">$38.00</p>
+</div>
+</a>
+<!-- Product Card 3 -->
+<a class="group flex flex-col space-y-4 lg:mt-8" href="#">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Oakmoss Amber Apothecary Candle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, atmospheric shot of an apothecary-style amber glass candle jar labeled 'Oakmoss Amber'. The candle is lit, casting a warm, flickering glow on a dark, textured slate background. A subtle hint of smoke curls upwards, adding to the mysterious and sophisticated vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRgjj1bjnA2l4gMBe98uaTZQj-hEqCmss1bBaMWRq3t_MqNrq3SgYsYvk_52eeLplpJLcldimNLe9T_JFy6axmcMD7lg7Up1Vwc4SfEt9p5hEIRx9tE7YfGkGo6oNyfnG6lGH3W3-JFsRd_VyS_Y_ah8HySJAaKqQAnUDffbsdL7MdAkkhxDaUx5fhNMt18g-QeeBzzoVo-vDF-_TSTgfLCL0-qu4So7Odfy_mxkjVn6YfTH8a8B3gTpKITTQ9Mk4Rc2uiCBf7Fb0"/>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-[20px] text-primary">Oakmoss Amber</h4>
+<p class="font-body-sm text-secondary">$45.00</p>
+</div>
+</a>
+<!-- Product Card 4 -->
+<a class="group flex flex-col space-y-4 sm:mt-12" href="#">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Leather &amp; Amber Mini Bobby Candle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A uniquely shaped, sculptural candle in a creamy off-white color, placed on a smooth, minimalist surface. The background is a soft, muted sage green. The lighting is bright and even, highlighting the architectural curves of the wax. The aesthetic is modern, artistic, and highly curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUr_kXX9UcapFzKWh5NIwKhY_yfnkS9Yw1DkjBNd846PXNWMRA1QX_6o0nC39jHiTC4vb-OrDLS_t5TEzVdFxUNF4a1lm0SRbBVl-F-nXjLOog3hGG0-kBmHXeyJnL1QPJsrUllreaO04mLESWg1Sqm3IZeYw2xdbL83oS9INxd4VYvbxzIJMu6Jn-b3PS7E_aZsSB64X6yqeDUVOJs-sBgSvShr04zXQxFFZI6i26yy0lexCq0aNpJ6gyWOyUuWLfD0kxzlTb5EA"/>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-md text-[20px] text-primary">Leather &amp; Amber</h4>
+<p class="font-body-sm text-secondary">$55.00</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-lowest border-t border-outline-variant/20 flat no shadows w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap max-w-[1440px] mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col space-y-4 col-span-1 md:col-span-2">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim" href="#">
+                    Cozy Candle Co.
+                </a>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">
+                    © 2024 Cozy Candle Co. Artisanal Herbals. All rights reserved.
+                </p>
+</div>
+<!-- Links -->
+<div class="col-span-1">
+<ul class="flex flex-col space-y-3 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 Focus: ring-1 ring-primary/20" href="#">Newsletter</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 Focus: ring-1 ring-primary/20" href="#">Instagram</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 Focus: ring-1 ring-primary/20" href="#">Facebook</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<ul class="flex flex-col space-y-3 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 Focus: ring-1 ring-primary/20" href="#">Store Locator</a></li>
+<li><a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 Focus: ring-1 ring-primary/20" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

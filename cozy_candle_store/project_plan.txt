@@ -1,0 +1,18 @@
+# E-commerce Website Project: Cozy Candle Brand
+
+## Brand Identity
+- **Name:** Cozy Candle Co. (or similar based on image)
+- **Theme:** Natural, Herbal, Artisanal, Sophisticated
+- **Visuals:** High-quality candle photography, earth tones, plenty of whitespace, elegant serifs.
+
+## Screen List
+1. **Home Page:** As seen in the reference image. Hero section with featured candle, 'Best of Collection' grid, and trending products.
+2. **Shop (All Products):** A grid-based catalog with filters for scent (Herbal, Floral, Woody), size, and price.
+3. **Product Detail Page:** Deep dive into a single candle (e.g., 'Bois Vert' or 'Santos'). Includes description, burn time, scent notes, and 'Add to Cart'.
+4. **About Us & Services:** Narrative page explaining the 'Bio Herbal' philosophy, the hand-pouring process, and custom candle services.
+5. **Contact Us:** Clean form with brand contact details and a map.
+
+## Key Features
+- High-fidelity visual clone of the Pinterest reference.
+- Consistent navigation (Home, Shop, Pages, Blog, Look Book).
+- Professional e-commerce layout for all sub-pages.

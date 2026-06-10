@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Order Tracking | Abiir</title>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'cozy-green': '#375243',
+        'cozy-cream': '#efece7',
+        'cozy-beige': '#f5f4ef',
+        'cozy-text': '#222222',
+        'cozy-muted': '#666666',
+        
+        /* Aliases for other templates to adapt to home_page style */
+        "primary": "#375243",
+        "primary-container": "#375243",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#efece7",
+        "secondary": "#375243",
+        "secondary-container": "#f5f4ef",
+        "on-secondary": "#ffffff",
+        "tertiary": "#666666",
+        "surface": "#efece7",
+        "background": "#efece7",
+        "on-surface": "#222222",
+        "on-surface-variant": "#666666",
+        "on-background": "#222222",
+        "surface-container": "#f5f4ef",
+        "outline": "#d1d5db",
+        "outline-variant": "#e5e7eb"
+      },
+      fontFamily: {
+        serif: ['"EB Garamond"', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+        
+        /* Aliases for other templates */
+        "display-lg": ['"EB Garamond"', 'serif'],
+        "headline-md": ['"EB Garamond"', 'serif'],
+        "body-lg": ['Inter', 'sans-serif'],
+        "body-sm": ['Inter', 'sans-serif'],
+        "label-uppercase": ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+    body { background-color: theme('colors.cozy-cream'); color: theme('colors.cozy-text'); }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+</style>
+
+</head>
+<body class="font-sans antialiased text-sm bg-cozy-cream text-cozy-text min-h-screen flex flex-col">
+
+  <!-- BEGIN: MainHeader -->
+  <header class="bg-cozy-cream sticky top-0 z-50 border-b border-gray-200">
+  <div class="container mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+  <!-- Mobile Menu Button -->
+  <button class="lg:hidden text-gray-800 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  </button>
+<!-- Logo & Navigation -->
+<div class="flex items-center space-x-8">
+<a class="text-2xl font-serif font-bold tracking-tight text-gray-900 flex items-center" href="index.html">
+<span class="mr-2 lg:hidden">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+          <div class="w-8 h-8 rounded-full bg-cozy-green text-white flex items-center justify-center mr-2 font-serif font-bold text-lg">A</div>
+          Abiir
+        </a>
+<nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-semibold text-gray-700">
+<a class="hover:text-cozy-green transition-colors " href="index.html">Home</a>
+<a class="hover:text-cozy-green transition-colors " href="shop.html">Shop</a>
+<a class="hover:text-cozy-green transition-colors " href="about.html">About</a>
+<a class="hover:text-cozy-green transition-colors " href="contact.html">Contact</a>
+</nav>
+</div>
+<!-- Utilities -->
+<div class="flex items-center space-x-4 lg:space-x-6 text-xs font-semibold text-gray-700">
+<div class="hidden md:flex items-center space-x-4 border-r border-gray-300 pr-4">
+<a class="hover:text-cozy-green transition-colors flex items-center" href="#">
+<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            My Account
+</a>
+</div>
+<div class="flex items-center space-x-3 lg:space-x-4">
+<button class="hover:text-cozy-green transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button class="hover:text-cozy-green transition-colors relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  <span class="absolute -top-1 -right-2 bg-cozy-green text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]">0</span>
+  </button>
+  </div>
+  </div>
+  </div>
+  
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden w-full bg-cozy-cream border-t border-gray-200 absolute left-0 top-full">
+    <nav class="flex flex-col space-y-4 px-6 py-6 text-sm font-semibold text-gray-700 uppercase tracking-widest shadow-lg">
+      <a class="hover:text-cozy-green transition-colors " href="index.html">Home</a>
+      <a class="hover:text-cozy-green transition-colors " href="shop.html">Shop</a>
+      <a class="hover:text-cozy-green transition-colors " href="about.html">About</a>
+      <a class="hover:text-cozy-green transition-colors " href="contact.html">Contact</a>
+      <a class="hover:text-cozy-green transition-colors border-t border-gray-200 pt-4 mt-2" href="#">My Account</a>
+    </nav>
+  </div>
+  </header>
+  <!-- END: MainHeader -->
+  
+<main class="flex-grow w-full max-w-[1000px] mx-auto px-4 lg:px-8 py-16">
+    <div class="prose prose-stone lg:prose-xl max-w-none">
+        <h1 class="font-serif text-4xl text-gray-900 mb-8">Order Tracking</h1>
+        <div class="space-y-6">
+            <h2 class="font-serif text-2xl text-gray-900 mt-8 mb-4">{line}</h2>
+        </div>
+    </div>
+</main>
+
+<!-- BEGIN: Footer -->
+<footer class="bg-cozy-beige border-t border-gray-200 mt-16">
+  <div class="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Brand & Newsletter -->
+      <div class="col-span-1 md:col-span-2">
+        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4">Abiir</h2>
+        <p class="text-gray-600 mb-6 text-sm max-w-sm">
+          Premium aroma diffusers, scented candles, and essential oils to elevate your home.
+        </p>
+        <div class="flex max-w-md">
+          <input type="email" placeholder="Your email address" class="w-full bg-white border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-cozy-green">
+          <button class="bg-cozy-green text-white px-6 py-2 text-xs uppercase tracking-widest font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap">Subscribe</button>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="col-span-1">
+        <h3 class="text-xs uppercase tracking-widest font-semibold text-gray-900 mb-4">Shop</h3>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li><a href="shop.html" class="hover:text-cozy-green transition-colors">All Products</a></li>
+          <li><a href="about.html" class="hover:text-cozy-green transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-cozy-green transition-colors">Contact</a></li>
+          <li><a href="faq.html" class="hover:text-cozy-green transition-colors">FAQ</a></li>
+          <li><a href="order-tracking.html" class="hover:text-cozy-green transition-colors">Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="col-span-1">
+        <h3 class="text-xs uppercase tracking-widest font-semibold text-gray-900 mb-4">Support</h3>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li><a href="privacy-policy.html" class="hover:text-cozy-green transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-of-services.html" class="hover:text-cozy-green transition-colors">Terms of Service</a></li>
+          <li><a href="refund-policy.html" class="hover:text-cozy-green transition-colors">Refund Policy</a></li>
+          <li><a href="return-policy.html" class="hover:text-cozy-green transition-colors">Return Policy</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+      <p>&copy; 2026 Abiir. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-cozy-green">Instagram</a>
+        <a href="#" class="hover:text-cozy-green">Facebook</a>
+        <a href="#" class="hover:text-cozy-green">Pinterest</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: Footer -->
+
+</body>
+</html>

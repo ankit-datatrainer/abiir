@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cozy Candle Co. - Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#cac6bc",
+                      "inverse-surface": "#30312e",
+                      "tertiary": "#432a11",
+                      "on-primary-fixed-variant": "#2e4d3c",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c2c8c1",
+                      "surface-dim": "#dbdad6",
+                      "surface-tint": "#466553",
+                      "surface-bright": "#fbf9f5",
+                      "tertiary-fixed": "#ffdcc0",
+                      "on-tertiary-fixed-variant": "#5e4126",
+                      "on-secondary-fixed-variant": "#48473f",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#5d4025",
+                      "surface-container": "#f0eeea",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#e6e2d7",
+                      "on-primary-fixed": "#012113",
+                      "primary-fixed": "#c7ebd4",
+                      "primary-container": "#2d4c3b",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#accfb8",
+                      "on-surface": "#1b1c1a",
+                      "surface-container-low": "#f5f3ef",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1b1c1a",
+                      "on-secondary-fixed": "#1c1c15",
+                      "on-primary": "#ffffff",
+                      "primary": "#163526",
+                      "inverse-on-surface": "#f2f0ec",
+                      "on-secondary-container": "#66645c",
+                      "surface-variant": "#e4e2de",
+                      "on-tertiary-fixed": "#2c1602",
+                      "surface": "#fbf9f5",
+                      "background": "#fbf9f5",
+                      "outline": "#727973",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#99bca6",
+                      "secondary": "#605e56",
+                      "surface-container-high": "#eae8e4",
+                      "on-surface-variant": "#424843",
+                      "secondary-fixed": "#e6e2d7",
+                      "on-tertiary-container": "#d4ac8a",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e4e2de",
+                      "primary-fixed-dim": "#accfb8",
+                      "tertiary-fixed-dim": "#e8bf9b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "display-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "label-uppercase": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-uppercase": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fbf9f5; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c2c8c1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #727973; 
+        }
+
+        /* Checkbox styling */
+        .filter-checkbox {
+            accent-color: #163526;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 0; /* Align with 0px radius buttons */
+            border-color: #727973;
+            cursor: pointer;
+        }
+        .filter-checkbox:checked {
+            background-color: #163526;
+            border-color: #163526;
+        }
+        
+        /* Range slider styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #163526;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #c2c8c1;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-container-highest border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-base max-w-[1440px] mx-auto min-h-[80px]">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md font-normal text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300" href="#">
+                Cozy Candle Co.
+            </a>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-sm text-body-sm uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Home</a>
+<a class="font-body-sm text-body-sm uppercase tracking-widest text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:opacity-70 transition-opacity duration-300" href="#">Shop</a>
+<a class="font-body-sm text-body-sm uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Pages</a>
+<a class="font-body-sm text-body-sm uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Blog</a>
+<a class="font-body-sm text-body-sm uppercase tracking-widest text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-70 transition-opacity duration-300" href="#">Look Book</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-4">
+<button aria-label="search" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="person" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button aria-label="favorite" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="shopping_cart" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1 relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<!-- Notification dot -->
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-error ring-2 ring-surface"></span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="md:hidden text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity duration-300 focus:outline-none p-1">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow pt-[100px] pb-12 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+<!-- Page Header -->
+<header class="mb-12 md:mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end md:justify-between border-b border-outline-variant/30 pb-8">
+<div class="max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Artisanal Candles</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Discover our collection of hand-poured, botanical-infused candles. Crafted with 100% natural soy wax and essential oils to bring tranquility to your space.
+                </p>
+</div>
+<!-- Sort & View Controls (Desktop mostly) -->
+<div class="mt-8 md:mt-0 flex items-center justify-center md:justify-end space-x-6 text-body-sm font-body-sm text-secondary">
+<div class="flex items-center space-x-2">
+<span class="uppercase tracking-widest text-[10px] font-semibold">Sort By:</span>
+<select class="bg-transparent border-none focus:ring-0 text-primary font-medium cursor-pointer p-0 pr-6">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+<div class="hidden lg:flex items-center space-x-2">
+<button class="p-1 text-primary hover:opacity-70 transition-opacity"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="p-1 opacity-50 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">view_list</span></button>
+</div>
+</div>
+</header>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-1/4 pr-0 lg:pr-8 mb-10 lg:mb-0">
+<!-- Mobile Filter Toggle -->
+<div class="lg:hidden mb-6 border border-outline-variant/50 p-4 flex justify-between items-center cursor-pointer" onclick="document.getElementById('filter-content').classList.toggle('hidden')">
+<span class="font-label-uppercase text-label-uppercase uppercase text-primary tracking-widest">Filter Products</span>
+<span class="material-symbols-outlined text-primary">tune</span>
+</div>
+<div class="hidden lg:block space-y-10" id="filter-content">
+<!-- Category: Scent -->
+<div>
+<h3 class="font-headline-md text-[20px] text-primary border-b border-outline-variant/30 pb-3 mb-5">Scent Profile</h3>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center group cursor-pointer">
+<input class="filter-checkbox mr-3 transition-colors duration-200" id="scent-herbal" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="scent-herbal">Herbal &amp; Botanical <span class="text-secondary/60 ml-1">(12)</span></label>
+</li>
+<li class="flex items-center group cursor-pointer">
+<input checked="" class="filter-checkbox mr-3 transition-colors duration-200" id="scent-floral" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="scent-floral">Floral &amp; Sweet <span class="text-secondary/60 ml-1">(8)</span></label>
+</li>
+<li class="flex items-center group cursor-pointer">
+<input class="filter-checkbox mr-3 transition-colors duration-200" id="scent-woody" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="scent-woody">Woody &amp; Earthy <span class="text-secondary/60 ml-1">(15)</span></label>
+</li>
+<li class="flex items-center group cursor-pointer">
+<input class="filter-checkbox mr-3 transition-colors duration-200" id="scent-citrus" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="scent-citrus">Citrus &amp; Fresh <span class="text-secondary/60 ml-1">(6)</span></label>
+</li>
+</ul>
+</div>
+<!-- Category: Size -->
+<div>
+<h3 class="font-headline-md text-[20px] text-primary border-b border-outline-variant/30 pb-3 mb-5">Size</h3>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center group cursor-pointer">
+<input class="filter-checkbox mr-3 transition-colors duration-200" id="size-small" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="size-small">Small (4 oz) <span class="text-secondary/60 ml-1">(10)</span></label>
+</li>
+<li class="flex items-center group cursor-pointer">
+<input checked="" class="filter-checkbox mr-3 transition-colors duration-200" id="size-medium" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="size-medium">Medium (8 oz) <span class="text-secondary/60 ml-1">(24)</span></label>
+</li>
+<li class="flex items-center group cursor-pointer">
+<input class="filter-checkbox mr-3 transition-colors duration-200" id="size-large" type="checkbox"/>
+<label class="cursor-pointer group-hover:text-primary transition-colors" for="size-large">Large (16 oz) <span class="text-secondary/60 ml-1">(7)</span></label>
+</li>
+</ul>
+</div>
+<!-- Category: Price -->
+<div>
+<h3 class="font-headline-md text-[20px] text-primary border-b border-outline-variant/30 pb-3 mb-5">Price Range</h3>
+<div class="px-1">
+<input class="w-full mb-4" max="120" min="15" type="range" value="80"/>
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span>$15</span>
+<span class="text-primary font-medium">Up to $80</span>
+<span>$120</span>
+</div>
+</div>
+</div>
+<!-- Reset Button -->
+<button class="w-full py-3 border border-outline hover:border-primary text-secondary hover:text-primary font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors duration-300 mt-6">
+                        Clear All Filters
+                    </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="w-full lg:w-3/4">
+<!-- Active Filters Chips -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="inline-flex items-center bg-surface-container px-3 py-1.5 text-xs font-label-uppercase uppercase tracking-widest text-primary border border-outline-variant/30">
+                        Floral &amp; Sweet
+                        <button class="ml-2 hover:text-error transition-colors focus:outline-none"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center bg-surface-container px-3 py-1.5 text-xs font-label-uppercase uppercase tracking-widest text-primary border border-outline-variant/30">
+                        Medium (8 oz)
+                        <button class="ml-2 hover:text-error transition-colors focus:outline-none"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center bg-surface-container px-3 py-1.5 text-xs font-label-uppercase uppercase tracking-widest text-primary border border-outline-variant/30">
+                        Up to $80
+                        <button class="ml-2 hover:text-error transition-colors focus:outline-none"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<!-- Sale Badge -->
+<span class="absolute top-4 left-4 z-10 bg-primary text-on-primary px-3 py-1 font-label-uppercase text-[10px] uppercase tracking-widest">New In</span>
+<!-- Hover Action (Add to Cart) -->
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-primary/95 hover:bg-primary text-on-primary py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors shadow-lg">
+                                    Add to Cart
+                                </button>
+</div>
+<img alt="A beautifully crafted artisanal candle in an amber glass jar, resting on a textured linen cloth. Soft, warm natural sunlight highlights the 'Lavender Sage' minimal white label. The surrounding setting is a clean, neutral tone typical of a high-end minimalist editorial lookbook, evoking a cozy and tranquil botanical mood." class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A beautifully crafted artisanal candle in an amber glass jar, resting on a textured linen cloth. Soft, warm natural sunlight highlights the 'Lavender Sage' minimal white label. The surrounding setting is a clean, neutral tone typical of a high-end minimalist editorial lookbook, evoking a cozy and tranquil botanical mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD342Z7x6CGXLPruMlymC6uxkr5FaEiKin2Y7XOmNbQku7tbEtmHr1pOY9cv9pwgW3brOUMRB0yElv890EKKfJO6xFm84Fp0hZYM4_WWCCpTa0F1g6UVrI5sUtGE6FUE4IhZeI6d_Hbq_81C5yJaEPerkL3VXrjRbiZiXGylBMaOU22QbvJ93TFvNimvaHbtbqYuZrgveMFNLo-Qxv4hyjVd1s-j014CmQlhYzaF_SclIsm5_B8hucBjEokHKmZQrm5kG0QxlfsQFQ"/>
+<!-- Overlay to ensure button contrast on hover -->
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star_half</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Lavender Sage</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Floral &amp; Herbal • 8 oz</p>
+<p class="font-body-lg text-body-lg text-primary">$32.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-primary/95 hover:bg-primary text-on-primary py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors shadow-lg">
+                                    Add to Cart
+                                </button>
+</div>
+<img alt="A minimalist white ceramic candle jar with a lit wick, placed on a smooth stone slab. Surrounding the candle are subtle dried chamomile flowers. The lighting is bright and diffuse, creating a serene, pure aesthetic matching a slow-living bio herbal brand. The mood is calm and purifying." class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A minimalist white ceramic candle jar with a lit wick, placed on a smooth stone slab. Surrounding the candle are subtle dried chamomile flowers. The lighting is bright and diffuse, creating a serene, pure aesthetic matching a slow-living bio herbal brand. The mood is calm and purifying." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmNlR9mQqgr1PGjca_YGyvuaL5i1lyLsrmQLOUhjIcfnUghyW2lxPHzbH3lZmfCYLPHtRhdTh_7_SE-ZwOEg3OwAQfa9wz8OjGyfnAPmCNo4snyiPin2DWoD_wSK5nFj6dBzlpBh96XIw8ZMxIP8smInCOjEJ3zNQYsXkPPZh-c7M3gQ6A0WE-VojNuEx844zdkJR5Z6zDOV44L5GP0YIOHEhMXZlEkWYdZNht6h1wPjVllMGYIQhLm7DfcIoWBa7ek57dOSXVvsU"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Chamomile Drift</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Floral &amp; Sweet • 8 oz</p>
+<p class="font-body-lg text-body-lg text-primary">$34.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-primary/95 hover:bg-primary text-on-primary py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors shadow-lg">
+                                    Add to Cart
+                                </button>
+</div>
+<img alt="An elegant frosted glass candle sitting on a dark oak wooden table. Next to it are fresh cut rose petals and a vintage brass snuffer. The scene is shot with a slightly moody, dramatic lighting that emphasizes the rich textures and premium quality of the artisanal product. High-end editorial photography style." class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="An elegant frosted glass candle sitting on a dark oak wooden table. Next to it are fresh cut rose petals and a vintage brass snuffer. The scene is shot with a slightly moody, dramatic lighting that emphasizes the rich textures and premium quality of the artisanal product. High-end editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8K1HhLOXrO5bvj2vwg6pLAdNJHGXQcPJHlLohJfxX45QU5OPjei2nz_XgaB-raK7_80LlWoSLYqX1gWf1G-xmngwx8WuopxvWyNQbVywPu_qw2VyGUeroEamBPMD-HioZ5UossfDMe1bUSmqHS40EsroEMuthli6RW5wjkF7tl8G-MmmmL1ep7LN1Al0vbdYi-jtotjeFXgaeTTLRuuvjFa3qg7Jr8IgNH9781sQ-eHZMVA89Q_HexxpBHd5f-DqZqlHNV9nKuBI"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Wild Rose &amp; Oud</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Floral &amp; Woody • 8 oz</p>
+<p class="font-body-lg text-body-lg text-primary">$38.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<!-- Best Seller Badge -->
+<span class="absolute top-4 left-4 z-10 border border-primary text-primary px-3 py-1 font-label-uppercase text-[10px] uppercase tracking-widest bg-surface/80 backdrop-blur-sm">Bestseller</span>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-primary/95 hover:bg-primary text-on-primary py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors shadow-lg">
+                                    Add to Cart
+                                </button>
+</div>
+<img alt="A dark amber glass candle jar with a prominent, elegant serif-font label reading 'Tobacco Vanilla'. The candle is placed against a soft cream background with subtle, organic shadows cast by nearby unseen foliage. The aesthetic is warm, inviting, and sophisticated, perfectly capturing a boutique artisanal vibe." class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A dark amber glass candle jar with a prominent, elegant serif-font label reading 'Tobacco Vanilla'. The candle is placed against a soft cream background with subtle, organic shadows cast by nearby unseen foliage. The aesthetic is warm, inviting, and sophisticated, perfectly capturing a boutique artisanal vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnEtYxYJU-q9L49w08-qiS6RJukJWpI3f2yfPi5PoSn5sVvZWU8qo_jwtuXQdPXjrkDjrZW8onsmh4Cvnb4RNQjiBkIsZNBgFpATrJjeGAhfSrzCVlnMijFaBEm6grFdnPfd9Us7cHVLlb3prZTyzagCpo-IJIsYvP_mpE3QV5pniPGCrzNwCF3MYy7kwKK4JhDmS9E3HSoSaKAesGeM2W5_r98_MMWezpm6yKGUeFy9uHZ4TEwrpdDNpbQ1MY9qC7heTLtYHOsSg"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Tobacco Vanilla</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Sweet &amp; Earthy • 8 oz</p>
+<div class="flex items-center justify-center space-x-3">
+<span class="font-body-lg text-body-lg text-secondary line-through text-[14px]">$42.00</span>
+<span class="font-body-lg text-body-lg text-error-container text-red-800">$36.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 (Sold Out) -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<!-- Sold Out Badge -->
+<span class="absolute top-4 left-4 z-10 bg-outline text-white px-3 py-1 font-label-uppercase text-[10px] uppercase tracking-widest">Sold Out</span>
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-outline/90 text-white py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest cursor-not-allowed">
+                                    Notify Me
+                                </button>
+</div>
+<!-- Desaturated image for sold out -->
+<img alt="A tall, slender pillar candle infused with dried herbs, placed delicately on a piece of rough natural linen. The lighting is soft and ethereal, highlighting the organic textures of the herbs embedded in the wax. The overall palette is muted and calm, emphasizing natural beauty and artisanal craftsmanship." class="w-full h-full object-cover object-center grayscale opacity-70 group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A tall, slender pillar candle infused with dried herbs, placed delicately on a piece of rough natural linen. The lighting is soft and ethereal, highlighting the organic textures of the herbs embedded in the wax. The overall palette is muted and calm, emphasizing natural beauty and artisanal craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaArjjDVT_gJXTgP25Ifyw15n82_u3Owqmng4N6I9uke73vcFWiBqto4mkLeS4g7BxIxb3RuVMxCT1U-bDgkCA38KbikUqSvEMqmQxkW-n4NA3LyprP23jSBuRdlWaxCwYDJY0zzZ-JvwYXLZ8roh4Y-PWjYf3b_WsN6t0GEroghpvPLs7vEVQsIwQQhJ0ZIIXcmDgFySLnXEfXYw7PHLoQgT_6HPOte7ZkRlkpBNxdiw2eiGw5FRP32qi0Fps6pkKmmAD0-vHYlc"/>
+<div class="absolute inset-0 bg-surface/20 pointer-events-none"></div>
+</div>
+<div class="text-center opacity-60">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star_half</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Eucalyptus Mint</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Herbal &amp; Fresh • 8 oz</p>
+<p class="font-body-lg text-body-lg text-primary">$30.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden flex items-center justify-center">
+<div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+<button class="w-full bg-primary/95 hover:bg-primary text-on-primary py-3 font-label-uppercase text-label-uppercase uppercase tracking-widest transition-colors shadow-lg">
+                                    Add to Cart
+                                </button>
+</div>
+<img alt="Two small travel tin candles arranged asymmetrically alongside a matchbox and loose tea leaves on a warm cream surface. The composition is reminiscent of a high-end editorial spread, focusing on the slow-living aesthetic. The lighting creates soft, elongated shadows, enhancing the tranquil mood of the bio-herbal brand." class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Two small travel tin candles arranged asymmetrically alongside a matchbox and loose tea leaves on a warm cream surface. The composition is reminiscent of a high-end editorial spread, focusing on the slow-living aesthetic. The lighting creates soft, elongated shadows, enhancing the tranquil mood of the bio-herbal brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuNQzXU4ccJf_BBNfT2lYMjpW0FxwPQXSIiK50_lBzeKuGYZm4_fwgmox4Pd4yj9y4v3SOFiE9q_yhcIKy_AoUgL46o1soVUmthILvcU5D9VN-x230khDnhejuevfI0lV-E6ucedYGw7ouuCdhI6uf5sxmSG1E8MY-_HZzSRFUeYRuxxwp0OTlOYlm_7rWU-thUc1yp2AEI8VbTOjseSiTeN3lHYw29nDF9GKUYw-nnRt3xroZ4TbPA3JFSyc3nabDYfyqr3mWR2w"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<div class="flex justify-center text-tertiary-fixed-dim mb-2">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+</div>
+<h3 class="font-headline-md text-[22px] text-primary mb-1">Jasmine Honeysuckle</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-2 uppercase tracking-widest text-[10px]">Floral &amp; Sweet • 8 oz</p>
+<p class="font-body-lg text-body-lg text-primary">$35.00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 border-t border-outline-variant/30 pt-10 flex items-center justify-center space-x-6">
+<button class="text-secondary hover:text-primary transition-colors focus:outline-none flex items-center group">
+<span class="material-symbols-outlined mr-2 group-hover:-translate-x-1 transition-transform">arrow_left_alt</span>
+<span class="font-label-uppercase text-label-uppercase uppercase tracking-widest">Prev</span>
+</button>
+<div class="flex space-x-4 font-headline-md text-primary">
+<span class="border-b border-primary px-1">1</span>
+<a class="text-secondary hover:text-primary px-1 transition-colors" href="#">2</a>
+<a class="text-secondary hover:text-primary px-1 transition-colors" href="#">3</a>
+<span class="text-secondary">...</span>
+</div>
+<button class="text-secondary hover:text-primary transition-colors focus:outline-none flex items-center group">
+<span class="font-label-uppercase text-label-uppercase uppercase tracking-widest">Next</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container dark:bg-surface-container-lowest border-t border-outline-variant/20 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap max-w-[1440px] mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim mb-6" href="#">
+                    Cozy Candle Co.
+                </a>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 mb-6 max-w-xs">
+                    Artisanal Herbals. Hand-poured with intention to bring tranquility and warmth to your slow-living sanctuary.
+                </p>
+<div class="mt-auto">
+<p class="font-body-sm text-body-sm text-secondary/60 text-[12px]">
+                        © 2024 Cozy Candle Co. Artisanal Herbals. All rights reserved.
+                    </p>
+</div>
+</div>
+<!-- Links Columns Spacer (empty column for grid layout alignment if needed, or expand others) -->
+<div class="hidden md:block col-span-1"></div>
+<!-- Navigation Column 1 -->
+<div class="col-span-1 flex flex-col space-y-4 font-body-sm text-body-sm">
+<h4 class="font-label-uppercase text-label-uppercase uppercase tracking-widest text-primary mb-2">Explore</h4>
+<a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 transition-colors focus:ring-1 focus:ring-primary/20 rounded-sm w-max" href="#">Newsletter</a>
+<a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 transition-colors focus:ring-1 focus:ring-primary/20 rounded-sm w-max" href="#">Instagram</a>
+<a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 transition-colors focus:ring-1 focus:ring-primary/20 rounded-sm w-max" href="#">Facebook</a>
+</div>
+<!-- Navigation Column 2 -->
+<div class="col-span-1 flex flex-col space-y-4 font-body-sm text-body-sm">
+<h4 class="font-label-uppercase text-label-uppercase uppercase tracking-widest text-primary mb-2">Support</h4>
+<a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 transition-colors focus:ring-1 focus:ring-primary/20 rounded-sm w-max" href="#">Store Locator</a>
+<a class="text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim underline underline-offset-4 transition-colors focus:ring-1 focus:ring-primary/20 rounded-sm w-max" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+                nav.classList.replace('py-base', 'py-2');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.replace('py-2', 'py-base');
+            }
+        });
+    </script>
+</body></html>
